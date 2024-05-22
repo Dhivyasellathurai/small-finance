@@ -16,20 +16,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "sf_user")
-public class User {
+@Table(name = "bank_account")
+public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private UUID user_id;
+	private UUID accountId;
 
-	@Column(name = "user_name")
-	private String userName;
+	@Column(name = "account_no")
+	private String accountNo;
 
-	@Column(name = "password")
-	private String password;
+	@Column(name = "account_holder_name")
+	private String accountHolderName;
 
-	@Column(name = "phone_no")
-	private String phoneNo;
+	@Column(name = "balance")
+	private double balance;
 
 }
